@@ -5,7 +5,7 @@
         <input type="number" v-model="numero"/>
         <button @click="generarCollatz()">Generar collatz</button>
         <ul>
-            <li v-for="num in numeros" :key="num" v-html="$filters.collatzColores(num)"></li>
+            <li v-for="numero in numeros" :key="numero" v-html="$filters.collatzColores(numero)" ></li>
         </ul>
 
     </div>
@@ -20,17 +20,16 @@
             }
         }, methods: {
             generarCollatz() {
-                this.numeros = []
-                let numero = this.numero
-                while(numero !== 1){
-                    if(numero % 2 === 0){
-                        numero = numero / 2
-                    }else{
-                        numero = numero * 3 + 1
+                let aux = [];
+                while(this.numero !=1){
+                    if(this.numero % 2 == 0){
+                        this.numero = this.numero / 2
+                    } else {
+                        this.numero = this.numero * 3 + 1
                     }
-                    this.numeros.push(numero)
+                    aux.push(this.numero)
                 }
-
+                this.numeros = aux
             }
         }
     }

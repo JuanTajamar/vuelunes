@@ -3,6 +3,7 @@
     <ul class="menu-nav">
         <li class="menu-item"><router-link to="/" class="menu-link">Home</router-link></li>
         <li class="menu-item"><router-link to="/collatz" class="menu-link">Collatz</router-link></li>
+        <li class="menu-item"><router-link to="/tablamultiplicar" class="menu-link">Tabla multiplicar</router-link></li>
     </ul>
   </div>
 </template>
